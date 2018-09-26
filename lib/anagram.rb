@@ -8,8 +8,9 @@ class Anagram
   def match(find_anagram_in_this_string) 
    
     find_anagram_in_this_string.find_all do |word| 
-      word.split("").sort == self.word_to_analyze.split("").sort 
+      if word.split("").sort == self.word_to_analyze.split("").sort 
         word 
+      end
     end 
   end
   
